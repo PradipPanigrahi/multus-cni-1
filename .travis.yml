@@ -22,9 +22,9 @@ env:
     - secure: "${REGISTRY_SECURE}"
   jobs:
   includes:
-    - TARGET=amd64
+    - env: TARGET=amd64
       arch: amd64
-    - TARGET=ppc64le
+    - env: TARGET=ppc64le
       arch: ppc64le
    
 
