@@ -11,6 +11,10 @@ services:
 go:
   - 1.13.x
 
+arch:
+  - amd64
+  - ppc64le
+
 env:
   global:
     - GO111MODULE=on
@@ -21,11 +25,8 @@ env:
     - DOCKER_CLI_EXPERIMENTAL="enabled"
     - secure: "${REGISTRY_SECURE}"
   jobs:
-  includes:
-    - env: TARGET=amd64
-      arch: amd64
-    - env: TARGET=ppc64le
-      arch: ppc64le
+  - TARGET=amd64
+  - TARGET=ppc64le
    
 
 before_install:
