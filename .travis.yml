@@ -21,6 +21,7 @@ env:
     - DOCKER_CLI_EXPERIMENTAL="enabled"
     - secure: "${REGISTRY_SECURE}"
   jobs:
+  includes:
     - TARGET=amd64
       arch: amd64
     - TARGET=ppc64le
