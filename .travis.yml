@@ -37,16 +37,16 @@ before_install:
   - if [ "${REPOSITORY_NAME}" = "" ]; then export REPOSITORY_NAME=multus; fi
   - sudo apt-get update -qq
   - go get github.com/mattn/goveralls
-  - wget https://github.com/git/git/archive/v2.22.0-rc2.tar.gz
-  - tar -xf v2.22.0-rc2.tar.gz
+  - sudo wget https://github.com/git/git/archive/v2.22.0-rc2.tar.gz
+  - sudo tar -xf v2.22.0-rc2.tar.gz
   - cd git-2.22.0-rc2/
-  - ln -s /usr/bin/db2x_docbook2texi /usr/bin/docbook2x-texi
+  - sudo ln -s /usr/bin/db2x_docbook2texi /usr/bin/docbook2x-texi
   - make configure
   - ./configure --prefix=/usr
   - make
   - make install
-  - wget https://dl.google.com/go/go1.12.15.linux-ppc64le.tar.gz
-  - tar -xf go1.12.15.linux-ppc64le.tar.gz -C /usr/local/
+  - sudo wget https://dl.google.com/go/go1.12.15.linux-ppc64le.tar.gz
+  - sudo tar -xf go1.12.15.linux-ppc64le.tar.gz -C /usr/local/
 
 install:
   - go get -u golang.org/x/lint/golint
