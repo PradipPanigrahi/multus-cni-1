@@ -45,9 +45,9 @@ before_install:
   - cd git-2.22.0-rc2/
   - sudo ln -s /usr/bin/db2x_docbook2texi /usr/bin/docbook2x-texi
   #- sudo make configure
-  - ./configure --prefix=/usr
-  - sudo make
-  - sudo make install
+  #- ./configure --prefix=/usr
+  - make
+  - make install
   - sudo wget https://dl.google.com/go/go1.12.15.linux-ppc64le.tar.gz
   - sudo tar -xf go1.12.15.linux-ppc64le.tar.gz -C /usr/local/
 
